@@ -41,7 +41,7 @@
       <div class="hero-text">
         <h1>Train Smarter.<br><span class="highlight">Spot Hazards</span><br>Before They Happen.</h1>
         <p class="hero-desc">
-          Spot the Hazard by Invitable is an AI-powered 360° safety training platform that immerses your workforce in photorealistic digital twins of real facilities. Identify, assess, and mitigate risks before anyone steps on site.
+          Spot the Hazard by Invitable is an AI-powered 360° safety training platform that immerses your workforce in photorealistic digital twins of real facilities. Identify, assess, and mitigate risks before they escalate on the floor.
         </p>
         <div class="hero-btns">
           <a href="spot_the_hazard.html" class="btn-primary btn-lg" target="_blank" rel="noopener">Play Live Demo</a>
@@ -314,7 +314,7 @@
         <div class="contact-info">
           <h2>DEPLOY SPOT THE HAZARD ACROSS YOUR DISTRIBUTION FLEET.</h2>
           <p>Speak with our solutions engineers. Configure a 30-day pilot for your distribution center or multi-site network. Get a custom ROI model based on your incident data.</p>
-          
+
           <div class="contact-details">
             <div class="detail">
               <strong>Enterprise Sales</strong>
@@ -374,7 +374,7 @@
                 <option value="">Select role</option>
                 <option>Safety Director / EHS</option>
                 <option>Operations / Warehouse Manager</option>
-                <option>Learning & Development</option>
+                <option>Learning &amp; Development</option>
                 <option>VP / C-Level</option>
                 <option>Other</option>
               </select>
@@ -444,14 +444,25 @@
     // Smooth scroll & active nav
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+
+        // Ignore placeholder hashes like "#" so we don't call querySelector("#")
+        if (!href || href === '#') {
+          e.preventDefault();
+          document.querySelector('.nav-links')?.classList.remove('open');
+          document.querySelector('.nav-actions')?.classList.remove('open');
+          return;
+        }
+
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+
         // Close mobile menu
-        document.querySelector('.nav-links').classList.remove('open');
-        document.querySelector('.nav-actions').classList.remove('open');
+        document.querySelector('.nav-links')?.classList.remove('open');
+        document.querySelector('.nav-actions')?.classList.remove('open');
       });
     });
 
@@ -463,7 +474,7 @@
       let current = '';
       sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
+        if (window.scrollY >= sectionTop) {
           current = section.getAttribute('id');
         }
       });
