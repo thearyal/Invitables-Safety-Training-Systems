@@ -12,7 +12,8 @@ This project includes:
 
 - [Live 360° prototype (LIVE URL)](https://spot-the-hazard-game.netlify.app/)
 - [GitHub repository](https://github.com/thearyal/spot-the-hazard.git)
-- 
+- [LIVE WEBSITE URL ](https://thearyal.github.io/Invitables-Safety-Training-Systems/)
+
 
 ## Project Overview
 
