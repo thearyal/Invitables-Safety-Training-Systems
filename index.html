@@ -36,6 +36,7 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="container hero-content">
       <div class="hero-text">
         <h1>Train Smarter.<br><span class="highlight">Spot Hazards</span><br>Before They Happen.</h1>
@@ -47,39 +48,95 @@
           <a href="#about" class="btn-secondary btn-lg">Explore Training Paths</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-image-placeholder">
-            <img src="assets/hero-warehouse.png" alt="Interactive warehouse training scene from Spot the Hazard" class="section-img">
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- Precision Training -->
   <section class="section precision">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header center">
+        <p class="section-kicker">Platform Capabilities</p>
         <h2>Precision Safety Training at Scale</h2>
         <p>Deliver proven factory-floor training. Transform workforce readiness with immersive digital twins built from real facilities.</p>
       </div>
-      <div class="cards-grid three-col">
-        <div class="feature-card">
-          <div class="card-icon">360°</div>
+
+      <div class="sys-grid">
+        <article class="sys-card">
+          <div class="sys-card-top">
+            <div class="sys-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"/></svg>
+            </div>
+            <span class="sys-mod">SYS_MOD_01</span>
+          </div>
           <h3>Immersive 360° Walkthroughs</h3>
-          <p>Photorealistic digital twins of your actual warehouses and plants. Train teams in environments that look and feel exactly like home base.</p>
-        </div>
-        <div class="feature-card">
-          <div class="card-icon">⚡</div>
+          <p>Zero friction browser-based panoramic training. Trainees inspect high-bay racks and dynamic cross-aisles with zero nausea and no bulky headsets required.</p>
+          <div class="sys-panel">
+            <div class="sys-sphere">
+              <svg viewBox="0 0 120 80" class="sphere-svg">
+                <ellipse cx="60" cy="40" rx="38" ry="38" fill="none" stroke="rgba(249,115,22,0.35)" stroke-width="1.2" stroke-dasharray="3 3"/>
+                <ellipse cx="60" cy="40" rx="38" ry="14" fill="none" stroke="rgba(249,115,22,0.5)" stroke-width="1"/>
+                <ellipse cx="60" cy="40" rx="14" ry="38" fill="none" stroke="rgba(249,115,22,0.5)" stroke-width="1"/>
+                <circle cx="60" cy="40" r="4" fill="#f97316"/>
+                <circle cx="60" cy="40" r="8" fill="none" stroke="#f97316" stroke-width="1" opacity="0.5"/>
+              </svg>
+              <span class="sys-panel-label">FOV: 110° · WEBRTC</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="sys-card">
+          <div class="sys-card-top">
+            <div class="sys-icon accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+            </div>
+            <span class="sys-mod accent">SYS_MOD_02</span>
+          </div>
           <h3>Dynamic Hazard Challenges</h3>
-          <p>AI-generated emergent risks that evolve with each session. Keep trainees sharp with scenarios that never feel repetitive.</p>
-        </div>
-        <div class="feature-card">
-          <div class="card-icon">📈</div>
-          <h3>Scale-Ready Platform</h3>
-          <p>Deploy across hundreds of sites instantly. No bulky headsets, no special hardware — just a browser and a commitment to safety.</p>
-        </div>
+          <p>Procedural incident generation: unspotted blindspot forklift routes, blocked emergency fire valves, and compromised high-tier racking pins.</p>
+          <div class="sys-panel">
+            <div class="sys-alerts">
+              <div class="sys-alert">
+                <span class="sys-dot critical"></span>
+                <span class="sys-alert-code">FORKLIFT_INTERSECT_ARC</span>
+                <span class="sys-badge critical">CRITICAL</span>
+              </div>
+              <div class="sys-alert">
+                <span class="sys-dot warning"></span>
+                <span class="sys-alert-code">BLOCKED_EGRESS_ROUTE_B</span>
+                <span class="sys-badge warning">WARNING</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="sys-card">
+          <div class="sys-card-top">
+            <div class="sys-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            </div>
+            <span class="sys-mod">SYS_MOD_03</span>
+          </div>
+          <h3>Sub-Second Reflex Analytics</h3>
+          <p>Measure true spatial reaction times, field-of-view sweep velocity, and automated OSHA qualification audits ready for HR export.</p>
+          <div class="sys-panel">
+            <div class="sys-chart">
+              <div class="sys-chart-head">
+                <span>AUDIT READINESS</span>
+                <span class="sys-chart-val">99.4% VERIFIED</span>
+              </div>
+              <svg viewBox="0 0 200 48" class="chart-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f97316" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,40 L20,36 L40,38 L60,28 L80,30 L100,18 L120,22 L140,12 L160,14 L180,8 L200,6 L200,48 L0,48 Z" fill="url(#chartFill)"/>
+                <path d="M0,40 L20,36 L40,38 L60,28 L80,30 L100,18 L120,22 L140,12 L160,14 L180,8 L200,6" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
